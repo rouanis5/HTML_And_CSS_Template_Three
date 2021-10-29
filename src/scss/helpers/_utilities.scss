@@ -1,0 +1,34 @@
+@use "sass:math";
+.parent {
+    //something here;
+}
+.container {
+    width: 95%;
+    @include mq($sm) {
+        width: math.div(10, 12) * 100%;
+        max-width: 576px;
+    }
+    @include mq($md) {
+        width: math.div(9, 12) * 100%;
+    }
+    @include mq($lg) {
+        width: math.div(10, 12) * 100%;
+        max-width: 923px;
+    }
+    margin-inline: auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+    user-select: none;
+    &,
+    &:active {
+        border: none;
+        outline: none;
+    }
+}
