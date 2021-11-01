@@ -1,6 +1,6 @@
 @use "sass:list";
-@use '../variables/flexProperties' as p;
-@use '../helpers/mixins' as *;
+@use "../variables/flexProperties" as p;
+@use "../helpers/mixins" as *;
 
 %center {
     @include center;

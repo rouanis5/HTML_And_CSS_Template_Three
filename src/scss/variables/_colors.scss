@@ -2,22 +2,12 @@
 $themes: ("light", "dark");
 $colors: (
     #{null}: (
-        main: #2196f3,
-        alt: #1787e0,
-        bg: #ececec,
-    ),
-    white: (
-        #{null} : #ffffff,
-        1: #fafafa,
-        2: #e9e6e6,
-        3: #ececec
-    ),
-    black: (
-        #{null}: #000000,
-        1: #333,
-        2: #666,
-        3: #777,
-    ),
+            main: #2196f3,
+            alt: #1787e0,
+            bg: #ececec,
+        ),
+    white: (#{null}: #ffffff, 1: #fafafa, 2: #e9e6e6, 3: #ececec),
+    black: (#{null}: #000000, 1: #333, 2: #666, 3: #777),
     sm: (
         facebook: #3b5998,
         instagram: #e95950,
