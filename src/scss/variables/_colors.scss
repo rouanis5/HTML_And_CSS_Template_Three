@@ -2,26 +2,21 @@
 $themes: ("light", "dark");
 $colors: (
     #{null}: (
-            // cyan30: #407bff30,
-            // bg: (
-            //     #f2f2f2,
-            //     // #212121,
-            //     #171f29,
-            // ),
-        ),
-    f: (
-        // 1: #4d4d4d,
-        // 2: (
-        //     var(--clr-f-1),
-        //     var(--clr--white),
-        // ),
+        main: #2196f3,
+        alt: #1787e0,
+        bg: #ececec,
     ),
-    btn: (
-        // grey: #b8b8b8,
-        // blue: #4668c0,
+    white: (
+        #{null} : #ffffff,
+        1: #fafafa,
+        2: #e9e6e6,
+        3: #ececec
     ),
-    crd: (
-        // black: #263238,
+    black: (
+        #{null}: #000000,
+        1: #333,
+        2: #666,
+        3: #777,
     ),
     sm: (
         facebook: #3b5998,
@@ -38,10 +33,10 @@ $colors: (
     @each $group, $content in $colors {
         @each $color, $hex in $content {
             @if (length($hex) == 1) {
-                --clr-#{$group}-#{"" + $color}: #{$hex};
+                --clr-#{""+$group}-#{"" + $color}: #{$hex};
             }
             @if (length($hex) == 2) {
-                --clr-#{$group}-#{"" + $color}: #{nth($hex, 1)};
+                --clr-#{""+$group}-#{"" + $color}: #{nth($hex, 1)};
             }
         }
     }
@@ -50,7 +45,7 @@ body.#{nth($themes,2)} {
     @each $group, $content in $colors {
         @each $color, $hex in $content {
             @if (length($hex) == 2) {
-                --clr-#{$group}-#{"" + $color}: #{nth($hex, 2)};
+                --clr-#{""+$group}-#{"" + $color}: #{nth($hex, 2)};
             }
         }
     }

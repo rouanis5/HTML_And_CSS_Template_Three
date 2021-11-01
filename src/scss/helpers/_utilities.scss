@@ -1,19 +1,17 @@
 @use "sass:math";
-.parent {
+//.parent {
     //something here;
-}
+//}
 .container {
     width: 95%;
-    @include mq($sm) {
-        width: math.div(10, 12) * 100%;
-        max-width: 576px;
-    }
     @include mq($md) {
-        width: math.div(9, 12) * 100%;
+        max-width: 750px;
     }
     @include mq($lg) {
-        width: math.div(10, 12) * 100%;
-        max-width: 923px;
+        max-width: 970px;
+    }
+    @include mq($xl) {
+        max-width: 1170px;
     }
     margin-inline: auto;
 }
