@@ -7,3 +7,11 @@ $xl: 1200px;
 $trans: 0.3s;
 $p-top: 100px;
 $p-bottom: 100px;
+
+//changabke variables
+.header{
+    --height: 48px;
+    @include mq($md){
+        --height: 68px;
+    }
+}
