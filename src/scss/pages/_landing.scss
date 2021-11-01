@@ -1,4 +1,4 @@
-.landing{
+.landing {
     //To do: try to make it using JS
     min-height: calc(100vh - #{$h-header-sm});
     @include mq($md) {
@@ -6,7 +6,7 @@
     }
     @include flex(center);
     //position relative in the before mixin
-    @include before{
+    @include before {
         inset: 0;
         @include size(100%);
         background: var(--clr--bg);
@@ -14,39 +14,43 @@
         transform-origin: top left;
         z-index: -1;
     }
-    .container{
-        @include flex(space-between,center);
+    .container {
+        @include flex(space-between, center);
         // padding: $p-landing 0;
         padding-bottom: $h-header-sm;
         @include mq($md) {
             padding-bottom: $h-header-md;
         }
     }
-    .image{
+    .image {
         width: 600px;
         animation: upDown infinite 2s alternate ease-in-out;
-        img{
+        img {
             width: 100%;
         }
     }
-    p{
+    p {
         font-size: 23px;
         line-height: 1.7;
         margin: 5px 0 0;
         color: #666;
-        max-width: 500px
+        max-width: 500px;
     }
-    @include mq($lg,max){
-        .image{
+    @include mq($lg, max) {
+        .image {
             display: none;
         }
-        .container{
+        .container {
             justify-content: center !important;
         }
         text-align: center;
     }
-    .go-down{
+    .go-down {
         position: absolute;
         bottom: $p-go-down;
+        color: var(--clr--main);
+        i {
+            animation: bouncing 1.5s infinite;
+        }
     }
 }
