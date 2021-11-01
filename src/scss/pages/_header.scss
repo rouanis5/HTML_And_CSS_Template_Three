@@ -54,11 +54,10 @@
             // position: relative;
             &:hover .mega-menu{
                 display: block;
+                opacity: 1;
                 @include mq($md){
-                    display: grid;
-                    grid-template-columns: 40% 1fr 1fr;
+                    display: flex;
                     gap: 10px 15px;
-                    opacity: 1;
                 }
             }
         }
@@ -71,6 +70,9 @@
         background: var(--clr-white-);
         border-top: 1px solid var(--clr-white-3);
         border-bottom: 3px solid var(--clr--main);
+        ul{
+            flex-grow: 1;
+        }
         a{
             display: inline-block;
             width: 100%;
@@ -100,6 +102,7 @@
             }
         }
         .image{
+            width: 40%;
             display: none;
             img{
                 width: 100%;
@@ -112,11 +115,11 @@
             transform: translateX(-50%);
             transition: opacity $trans;
             justify-content: space-around;
+        }
+        @include mq($lg) {
             .image{
                 display: block;
             }
-        }
-        @include mq($lg) {
             max-width: 970px;
         }
         @include mq($xl) {
