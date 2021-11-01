@@ -1,37 +1,38 @@
 @use "sass:math";
-.header{
+.header {
     background: var(--clr-white-);
     box-shadow: 0 0 10px #ddd;
-    .container{
-        @include flex(space-around,center){
+    .container {
+        @include flex(space-around, center) {
             flex-wrap: wrap;
-            @include mq($md){
+            @include mq($md) {
                 justify-content: space-between !important;
             }
         }
     }
-    .logo{
+    .logo {
         padding: initial 30px;
         @include flex(center);
         font-size: $fs3;
-        color:var(--clr--main);
-        font-weight: $fw-bold
+        color: var(--clr--main);
+        font-weight: $fw-bold;
     }
     //one height for the logo and links
-    .logo , .main-nav > li > a{
+    .logo,
+    .main-nav > li > a {
         min-height: $h-header-sm;
-        @include mq($md){
+        @include mq($md) {
             min-height: $h-header-md;
         }
     }
-    .main-nav{
-        @include flex(space-around,center){
+    .main-nav {
+        @include flex(space-around, center) {
             flex-wrap: wrap;
-            @include mq($sm){
+            @include mq($sm) {
                 justify-content: space-between;
             }
         }
-        & > li > a{
+        & > li > a {
             @include flex(center);
             display: inline-block;
             padding-left: $p-nav-links;
@@ -40,34 +41,34 @@
             text-align: center;
             font-size: $fs5;
             transition: $trans ease-out;
-            @include before{
+            @include before {
                 height: 3px;
                 width: 0;
                 inset: 0;
                 background: var(--clr--main);
                 transition: $trans ease-out;
             }
-            &:hover{
+            &:hover {
                 background: var(--clr-white-1);
                 color: var(--clr--main);
-                &::before{
+                &::before {
                     width: 100%;
                 }
             }
         }
-        li:last-child{
+        li:last-child {
             // position: relative;
-            &:hover .mega-menu{
+            &:hover .mega-menu {
                 display: block;
                 opacity: 1;
-                @include mq($md){
+                @include mq($md) {
                     display: flex;
                     gap: 10px 15px;
                 }
             }
         }
     }
-    .mega-menu{
+    .mega-menu {
         display: none;
         position: absolute;
         left: 0;
@@ -75,10 +76,10 @@
         background: var(--clr-white-);
         border-top: 1px solid var(--clr-white-3);
         border-bottom: 3px solid var(--clr--main);
-        ul{
+        ul {
             flex-grow: 1;
         }
-        a{
+        a {
             display: inline-block;
             width: 100%;
             color: var(--clr--main);
@@ -86,7 +87,7 @@
             font-weight: $fw-bold;
             padding: 13px;
             z-index: 1;
-            @include before{
+            @include before {
                 inset: 0;
                 width: 0;
                 height: 100%;
@@ -94,26 +95,26 @@
                 transition: $trans ease-in-out;
                 z-index: -1;
             }
-            &:hover::before{
+            &:hover::before {
                 width: 100%;
             }
         }
-        li a{
+        li a {
             border-bottom: 1px solid var(--clr-white-3);
         }
-        @include mq($md){
-            li:last-child a{
+        @include mq($md) {
+            li:last-child a {
                 border-bottom: none !important;
             }
         }
-        .image{
+        .image {
             width: 40%;
             display: none;
-            img{
+            img {
                 width: 100%;
             }
         }
-        @include mq($md){
+        @include mq($md) {
             max-width: 750px;
             padding: 30px;
             left: 50%;
@@ -122,7 +123,7 @@
             justify-content: space-around;
         }
         @include mq($lg) {
-            .image{
+            .image {
                 display: block;
             }
             max-width: 970px;
