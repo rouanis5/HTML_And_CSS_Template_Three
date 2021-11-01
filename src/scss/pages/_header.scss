@@ -11,7 +11,7 @@
         }
     }
     .logo {
-        padding: initial 30px;
+        // padding: initial 30px;
         @include flex(center);
         font-size: $fs3;
         color: var(--clr--main);
