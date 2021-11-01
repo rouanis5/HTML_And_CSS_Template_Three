@@ -11,20 +11,26 @@
         }
     }
     .logo{
-        min-height: var(--height);
         padding: initial 30px;
         @include flex(center);
         font-size: $fs3;
         color:var(--clr--main);
         font-weight: $fw-bold
     }
+    //one height for the logo and links
+    .logo , .main-nav > li > a{
+        min-height: $h-header-sm;
+        @include mq($md){
+            min-height: $h-header-md;
+        }
+    }
     .main-nav{
         @include flex(space-between,center);
         & > li > a{
             @include flex(center);
             display: inline-block;
-            min-height: var(--height);
-            padding: initial 30px;
+            padding-left: $p-nav-links;
+            padding-right: $p-nav-links;
             color: var(--clr-black-);
             text-align: center;
             font-size: $fs5;
@@ -85,8 +91,13 @@
                 width: 100%;
             }
         }
-        li:not(:last-child) a{
+        li a{
             border-bottom: 1px solid var(--clr-white-3);
+        }
+        @include mq($md){
+            li:last-child a{
+                border-bottom: none !important;
+            }
         }
         .image{
             display: none;
