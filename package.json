@@ -25,12 +25,11 @@
   "homepage": "https://github.com/rouanis5/HTML_And_CSS_Template_Three#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@parcel/transformer-sass": "^2.0.0",
-    "autoprefixer": "^10.4.0",
     "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1",
-    "parcel": "^2.0.0",
-    "postcss-cli": "^9.0.1"
+    "parcel-bundler": "^1.12.5",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.43.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
