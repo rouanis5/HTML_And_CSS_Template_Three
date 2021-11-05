@@ -1,0 +1,36 @@
+.main-title{
+    margin: 100px auto;
+    border: 2px solid var(--clr-black-);
+    padding: 10px 20px;
+    font-size: $fs-title;
+    width: fit-content;
+    text-transform: uppercase;
+    z-index: 1;
+    @include before-after{
+        @include size(12px);
+        background: var(--clr--main);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &::before{
+        left: $dis-title;
+    }
+    &::after{
+        right: $dis-title;
+    }
+    &:hover{
+        color: var(--clr-white-);
+        border-color: var(--clr-white-);
+        transition: $title-delay;
+        transition-delay: $title-delay - 0.1;
+        &::before{
+            z-index: -1;
+            animation: left-move $title-delay linear forwards;
+        }
+        &::after{
+            z-index: -1;
+            animation: right-move $title-delay linear forwards;
+        }
+    }
+}
