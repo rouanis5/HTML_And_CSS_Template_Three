@@ -43,3 +43,13 @@
         transform: translateX(10px);
     }
 }
+@keyframes flashing {
+    0%,40%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      @include size(200%);
+    }
+    
+}
