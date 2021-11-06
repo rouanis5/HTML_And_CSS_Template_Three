@@ -5,6 +5,8 @@
 }
 .container {
     width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
     @include mq($md) {
         max-width: 750px;
     }
