@@ -1,11 +1,11 @@
-.spikes{
+.spikes {
     @include after {
-        @include size(100%,$h-spikes);
+        @include size(100%, $h-spikes);
         right: 0;
         z-index: 1;
         //note: 130+230 = 360deg
         background: linear-gradient(130deg, var(--clr-white-) 25%, transparent 25%),
-                    linear-gradient(230deg, var(--clr-white-) 25%, transparent 25%);
+            linear-gradient(230deg, var(--clr-white-) 25%, transparent 25%);
         background-size: $h-spikes $h-spikes;
     }
 }

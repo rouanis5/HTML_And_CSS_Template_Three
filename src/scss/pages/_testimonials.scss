@@ -1,17 +1,17 @@
 .testimonials {
     background: var(--clr--bg);
-    .container{
+    .container {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 40px;
     }
-    .box{
+    .box {
         padding: 20px;
         background-color: var(--clr-white-);
         box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
         border-radius: 6px;
         position: relative;
-        img{
+        img {
             position: absolute;
             right: -10px;
             top: -50px;
@@ -19,10 +19,10 @@
             border-radius: 50%;
             border: 10px solid var(--clr--bg);
         }
-        h3{
+        h3 {
             margin-bottom: 10px;
         }
-        .title{
+        .title {
             color: var(--clr-black-3);
         }
         .rate .filled {

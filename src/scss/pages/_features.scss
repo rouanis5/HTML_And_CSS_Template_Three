@@ -1,31 +1,31 @@
-.features{
-    .container{
+.features {
+    .container {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 40px;
     }
-    .box{
+    .box {
         text-align: center;
         border: 1px solid var(--clr-black-4);
-        &.quality{
+        &.quality {
             --clr-data: #f44036;
         }
-        &.time{
+        &.time {
             --clr-data: #009688;
         }
-        &.passion{
+        &.passion {
             --clr-data: #03a9f4;
         }
-        .img-holder{
+        .img-holder {
             width: 100%;
             overflow: hidden;
-            @include before{
+            @include before {
                 inset: 0;
                 @include size(100%);
                 background: var(--clr-data);
                 opacity: 0.6;
             }
-            @include after{
+            @include after {
                 bottom: 0;
                 left: 0;
                 border-style: solid;
@@ -34,11 +34,11 @@
                 transition: $trans;
             }
         }
-        h2{
+        h2 {
             width: fit-content;
             font-size: $fs-feature;
             margin-inline: auto;
-            @include after{
+            @include after {
                 left: 0;
                 bottom: -20px;
                 height: 5px;
@@ -47,14 +47,14 @@
                 @extend %center-x;
             }
         }
-        p{
+        p {
             line-height: 2;
             font-size: $fs4;
             margin: 30px 0;
             padding: 25px;
             color: var(--clr-black-3);
         }
-        a{
+        a {
             display: inline-block;
             border: 3px solid var(--clr-data);
             width: fit-content;
@@ -69,12 +69,12 @@
             background-size: 200% 100%;
             background-position: right bottom;
         }
-        &:hover{
-            a{
+        &:hover {
+            a {
                 background-position: left bottom;
                 color: var(--clr-white-);
             }
-            .img-holder::after{
+            .img-holder::after {
                 border-width: 0 500px 100px 0;
             }
         }
