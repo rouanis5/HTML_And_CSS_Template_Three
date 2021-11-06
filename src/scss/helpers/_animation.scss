@@ -22,18 +22,24 @@
 }
 
 //create left-move and right-move animation
-@mixin LR-move($dir){
+@mixin LR-move($dir) {
     @keyframes #{$dir}-move {
-        50%{
-            #{$dir} : 0;
+        50% {
+            #{$dir}: 0;
             @include size(12px);
         }
-        100%{
-            #{$dir} : 0;
-            @include size(50%,100%);
+        100% {
+            #{$dir}: 0;
+            @include size(50%, 100%);
             border-radius: 0;
         }
     }
 }
 @include LR-move(left);
 @include LR-move(right);
+
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}
