@@ -1,0 +1,82 @@
+.features{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap: 40px;
+    }
+    .box{
+        text-align: center;
+        border: 1px solid var(--clr-black-4);
+        &.quality{
+            --clr-data: #f44036;
+        }
+        &.time{
+            --clr-data: #009688;
+        }
+        &.passion{
+            --clr-data: #03a9f4;
+        }
+        .img-holder{
+            width: 100%;
+            overflow: hidden;
+            @include before{
+                inset: 0;
+                @include size(100%);
+                background: var(--clr-data);
+                opacity: 0.6;
+            }
+            @include after{
+                bottom: 0;
+                left: 0;
+                border-style: solid;
+                border-width: 0 0 100px 500px;
+                border-color: transparent transparent var(--clr-white-) transparent;
+                transition: $trans;
+            }
+        }
+        h2{
+            width: fit-content;
+            font-size: $fs-feature;
+            margin-inline: auto;
+            @include after{
+                left: 0;
+                bottom: -20px;
+                height: 5px;
+                width: calc(100% - 30px);
+                background: var(--clr-data);
+                @extend %center-x;
+            }
+        }
+        p{
+            line-height: 2;
+            font-size: $fs4;
+            margin: 30px 0;
+            padding: 25px;
+            color: var(--clr-black-3);
+        }
+        a{
+            display: inline-block;
+            border: 3px solid var(--clr-data);
+            width: fit-content;
+            margin-bottom: 30px;
+            font-weight: $fw-bold;
+            font-size: 22px;
+            padding: 10px 30px;
+            border-radius: 6px;
+            transition: $trans;
+            color: var(--clr-data);
+            background: linear-gradient(to right, var(--clr-data) 50%, var(--clr-white-) 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+        }
+        &:hover{
+            a{
+                background-position: left bottom;
+                color: var(--clr-white-);
+            }
+            .img-holder::after{
+                border-width: 0 500px 100px 0;
+            }
+        }
+    }
+}
