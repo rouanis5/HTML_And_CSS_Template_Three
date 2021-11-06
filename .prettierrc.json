@@ -1,6 +1,13 @@
 {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "css",
+    "printWidth": 120,
+    "proseWrap": "preserve",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": false,
     "trailingComma": "es5",
-    "tabWidth": 4,
-    "semi": false,
-    "singleQuote": false
+    "useTabs": false,
+    "tabWidth": 4
 }
