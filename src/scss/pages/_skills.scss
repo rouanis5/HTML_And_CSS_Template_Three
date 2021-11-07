@@ -1,0 +1,38 @@
+.our-skills {
+    .container {
+        @include flex(null, center);
+    }
+    img {
+        @include mq($lg, max) {
+            display: none;
+        }
+    }
+    .skills {
+        width: 100%;
+    }
+    .skill {
+        h3 {
+            @include flex(space-between, center);
+            margin: 20px 0;
+            span {
+                font-size: 12px;
+                border: 1px solid var(--clr-white-3);
+                padding: 3px 5px;
+                border-radius: 4px;
+                color: var(--clr--main);
+            }
+        }
+        .the-progress {
+            height: 30px;
+            background: var(--clr-white-3);
+            position: relative;
+            span {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                background: var(--clr--main);
+                transition: width $trans linear;
+            }
+        }
+    }
+}
