@@ -1,0 +1,87 @@
+.team {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .box {
+        @include before-after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            border-radius: 10px;
+            transition: $trans;
+        }
+        &::before {
+            width: calc(100% - $m-team);
+            background: var(--clr-white-4);
+            z-index: -2;
+        }
+        &::after {
+            z-index: -1;
+            width: 0;
+            background: var(--clr-white-5);
+        }
+    }
+    .data {
+        @include flex;
+        margin-top: $m-team;
+        img {
+            width: calc(100% - $m-team);
+            border-radius: 10px;
+            transition: $trans;
+        }
+        a {
+            i {
+                color: var(--clr-black-3);
+                transition: $trans;
+            }
+            &:hover {
+                i {
+                    transform: scale(1.4);
+                }
+            }
+        }
+    }
+    .social {
+        @include flex(center, center, column);
+        width: $m-team;
+        gap: 25px;
+    }
+    .info {
+        margin-left: $m-team + 20;
+        padding: 20px 0;
+        h3 {
+            color: var(--clr--main);
+            font-size: $fs3;
+            transition: $trans;
+            margin-bottom: 5px;
+        }
+    }
+    //all hovers
+    .box:hover {
+        &::after {
+            width: calc(100% - $m-team);
+        }
+        img {
+            filter: grayscale(100%);
+        }
+        .data a {
+            //add social media btn colors on hover
+            @each $group, $content in $colors {
+                @if ($group == sm) {
+                    $i: 1;
+                    @each $color, $hex in $content {
+                        &:nth-child(#{$i}) i {
+                            color: var(--clr-#{$group}-#{"" + $color});
+                        }
+                        $i: $i + 1;
+                    }
+                }
+            }
+        }
+        h3 {
+            color: var(--clr-black-3);
+        }
+    }
+}
