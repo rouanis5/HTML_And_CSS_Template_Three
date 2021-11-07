@@ -6,16 +6,13 @@ $colors: (
             alt: #1787e0,
             bg: #ececec,
         ),
-    white: (#{null}: #ffffff, 1: #fafafa, 2: #e9e6e6, 3: #ececec),
+    white: (#{null}: #ffffff, 1: #fafafa, 2: #e9e6e6, 3: #ececec, 4: #f3f3f3, 5: #e4e4e4),
     black: (#{null}: #000000, 1: #333, 2: #666, 3: #777, 4: #ccc),
     sm: (
         facebook: #3b5998,
-        instagram: #e95950,
+        twitter: #1da1f2,
         linkedin: #007bb5,
-        github: (
-            #212121,
-            var(--clr--white),
-        ),
+        youtube: #ff0000,
     )
 );
 //creating css variables
