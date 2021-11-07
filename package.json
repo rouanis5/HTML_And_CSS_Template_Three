@@ -26,6 +26,11 @@
     "homepage": "https://github.com/rouanis5/HTML_And_CSS_Template_Three#readme",
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-prettier": "^4.0.0",
         "gh-pages": "^3.2.3",
         "normalize.css": "^8.0.1",
         "parcel-bundler": "^1.12.5",
