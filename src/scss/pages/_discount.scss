@@ -1,0 +1,68 @@
+.discount {
+    min-height: 100vh;
+    text-align: center;
+    @include mq($lg) {
+        display: flex;
+        & > * {
+            width: 50%;
+        }
+    }
+    .content {
+        width: 80%;
+        max-width: 500px;
+        margin-inline: auto;
+        padding: 40px;
+    }
+    h2 {
+        font-size: $fs1 - 2;
+        letter-spacing: -2px;
+        margin-bottom: 50px;
+    }
+    .image {
+        color: var(--clr-white-);
+        background-image: url("../images/discount-background1.jpg");
+        background-size: cover;
+        z-index: 1;
+        @include before {
+            @include size(100%);
+            top: 0;
+            left: 0;
+            background-color: rgb(23, 135, 224, 98%);
+            z-index: -1;
+        }
+        p {
+            line-height: 1.6;
+            font-size: $fs5;
+            margin-bottom: 30px;
+        }
+    }
+    form {
+        // @include flex(center);
+        // grid;
+        height: 100%;
+        & > * {
+            width: 100%;
+            background: var(--clr-white-1);
+            padding: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        textarea {
+            outline: none;
+            resize: none;
+            border: none;
+            min-height: 200px;
+        }
+        input,
+        textarea {
+            border-bottom: 1px solid var(--clr-black-4);
+        }
+        button {
+            background: var(--clr--main);
+            color: var(--clr-white-);
+            font-weight: $fw-bold;
+            font-size: $fs3;
+        }
+    }
+}
