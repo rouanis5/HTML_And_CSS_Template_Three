@@ -1,0 +1,46 @@
+.videos {
+    .holder {
+        @include flex(center, null);
+        border: 1px solid var(--clr-black-4);
+        @include mq($lg, max) {
+            display: block !important;
+        }
+    }
+    .list {
+        min-width: 300px;
+    }
+    .name,
+    ul li {
+        padding: 25px 30px;
+    }
+    .name {
+        @include flex(space-between, center);
+        font-weight: $fw-bold;
+        background: var(--clr-white-4);
+    }
+    ul li {
+        border-top: 1px solid var(--clr-white-3);
+        transition: $trans;
+        &:hover {
+            background: var(--clr-white-1);
+            color: var(--clr--main);
+        }
+        span {
+            display: block;
+            margin-top: 10px;
+            color: var(--clr-black-3);
+        }
+    }
+    .preview {
+        background: var(--clr--bg);
+        @include flex(space-between, center) {
+            flex-direction: column;
+        }
+        padding: 10px;
+        .info {
+            width: 100%;
+            background: var(--clr-white-);
+            padding: 30px;
+        }
+    }
+}
