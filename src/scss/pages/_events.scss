@@ -1,0 +1,92 @@
+.events {
+    img {
+        display: none;
+        max-width: 450px;
+    }
+    .details {
+        @include flex(center) {
+            gap: 10px;
+        }
+    }
+    .info {
+        text-align: center;
+    }
+    .time {
+        @include flex(center);
+        gap: 10px;
+        margin-inline: auto;
+    }
+    .unit {
+        border-radius: 5px;
+        width: 75px;
+        border: 1px solid var(--clr-black-5);
+        transition: $trans;
+        span {
+            display: block;
+            &:first-child {
+                padding: 20px;
+                font-weight: $fw-bold;
+                font-size: $fs2 - 5;
+                color: var(--clr--main);
+            }
+            &:last-child {
+                padding: 7px;
+                border-top: inherit;
+                font-size: $fs6;
+                font-weight: $fw-light;
+            }
+        }
+        &:hover {
+            border-color: var(--clr--main);
+        }
+    }
+    .title {
+        margin: 40px 0 10px;
+        font-size: $fs-title;
+    }
+    .description {
+        line-height: 1.7;
+        font-size: $fs4;
+        color: var(--clr-black-3);
+    }
+    .subscribe {
+        margin: 30px auto 0;
+        max-width: 600px;
+        form {
+            background: var(--clr--bg);
+            border-radius: 10px;
+            padding: 20px;
+            input {
+                padding: 20px;
+                width: 100%;
+                caret-color: var(--clr--main);
+                border-radius: inherit;
+                &:last-child {
+                    margin-top: 20px;
+                    background: var(--clr--main);
+                    color: var(--clr-white-);
+                    font-weight: $fw-bold;
+                    transition: $trans;
+                    &:hover {
+                        background: var(--clr--alt);
+                    }
+                }
+            }
+        }
+    }
+    @include mq($lg) {
+        img {
+            display: inline-block;
+        }
+        .subscribe form {
+            display: flex;
+            gap: 20px;
+            input {
+                &:last-child {
+                    margin-top: 0;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
