@@ -1,0 +1,114 @@
+.footer {
+    background: var(--clr--bg-footer);
+    color: var(--clr-black-4);
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 40px;
+    }
+    //first box
+    h3 {
+        font-weight: $fw-bold;
+        font-size: $fs1;
+        color: var(--clr-white-);
+    }
+    .social {
+        @include flex {
+            gap: 15px;
+        }
+        padding: 20px 0;
+        li a {
+            @include flex(center);
+            @include size(60px);
+            background: var(--clr-black-6);
+            color: inherit;
+            font-size: $fs3;
+        }
+    }
+    p.text {
+        line-height: 2;
+    }
+    //------------------------
+    //second box
+    .links li {
+        padding: 17px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--clr-black-1);
+        }
+        a {
+            color: inherit;
+            transition: $trans;
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\F101";
+
+                color: var(--clr--main);
+                margin-right: 10px;
+            }
+        }
+        &:hover {
+            a {
+                margin-left: 15px;
+                color: var(--clr-white-);
+            }
+        }
+    }
+    //------------------------
+    //third box
+    .line {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        @include flex(null, center) {
+            gap: 10px;
+        }
+        i {
+            color: var(--clr--main);
+            font-size: $fs3;
+            margin-right: 10px;
+        }
+    }
+
+    .info {
+        line-height: 1.7;
+        flex: 1;
+        span {
+            display: block;
+        }
+    }
+    //------------------------
+    //fourth box
+    img {
+        width: 78px;
+        border: 3px solid var(--clr-white-);
+        margin: 2px;
+    }
+    //-----------------------
+    .copyright {
+        @include flex(space-around, center);
+        text-align: center;
+        padding: 25px;
+        border-top: 1px solid var(--clr-black-1);
+        a {
+            color: var(--clr-white-);
+            font-weight: $fw-bold;
+        }
+        i {
+            color: #c53f3f;
+        }
+    }
+    //mq
+    @include mq($lg, max) {
+        text-align: center;
+        .social {
+            justify-content: center;
+        }
+        .line {
+            display: block !important;
+            i {
+                margin: 0 0 10px !important;
+            }
+        }
+    }
+}
