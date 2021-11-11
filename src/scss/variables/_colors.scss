@@ -5,9 +5,10 @@ $colors: (
             main: #2196f3,
             alt: #1787e0,
             bg: #ececec,
+            bg-footer: #191919,
         ),
     white: (#{null}: #ffffff, 1: #fafafa, 2: #e9e6e6, 3: #ececec, 4: #f3f3f3, 5: #e4e4e4),
-    black: (#{null}: #000000, 1: #333, 2: #666, 3: #777, 4: #ccc, 5: #dedede),
+    black: (#{null}: #000000, 1: #333, 2: #666, 3: #777, 4: #ccc, 5: #dedede, 6: #2b2b2b),
     sm: (
         facebook: #3b5998,
         twitter: #1da1f2,
