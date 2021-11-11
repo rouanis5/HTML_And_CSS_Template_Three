@@ -29,9 +29,10 @@
             span {
                 position: absolute;
                 inset: 0;
+                width: 0;
                 height: 100%;
                 background: var(--clr--main);
-                transition: width $trans linear;
+                transition: width $trans-slow * 2 linear;
             }
         }
     }
