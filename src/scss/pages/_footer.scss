@@ -14,15 +14,29 @@
     }
     .social {
         @include flex {
-            gap: 15px;
+            gap: 10px;
         }
-        padding: 20px 0;
-        li a {
-            @include flex(center);
-            @include size(60px);
-            background: var(--clr-black-6);
-            color: inherit;
-            font-size: $fs3;
+        margin: 10px 0 20px;
+        li {
+            a {
+                @include flex(center);
+                @include size(50px);
+                background: var(--clr-black-6);
+                color: inherit;
+                font-size: $fs3;
+                transition: $trans;
+            }
+            @each $group, $content in $colors {
+                @if ($group == sm) {
+                    $i: 1;
+                    @each $color, $hex in $content {
+                        &:nth-child(#{$i}) a:hover {
+                            background: var(--clr-#{$group}-#{"" + $color});
+                        }
+                        $i: $i + 1;
+                    }
+                }
+            }
         }
     }
     p.text {
