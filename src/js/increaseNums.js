@@ -1,7 +1,5 @@
+import { appearOptions } from "./main";
 const statsNum = document.querySelectorAll("[data-goal]");
-const increaseOptions = {
-    threshold: 0.5,
-};
 const increaseOnScroll = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (!entry.isIntersecting) {
@@ -17,7 +15,7 @@ const increaseOnScroll = new IntersectionObserver((entries) => {
         }, 20);
         increaseOnScroll.unobserve(entry.target);
     });
-}, increaseOptions);
+}, appearOptions);
 
 statsNum.forEach((num) => {
     increaseOnScroll.observe(num);
