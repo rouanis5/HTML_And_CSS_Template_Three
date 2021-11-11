@@ -4,6 +4,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 
 },{}],"Gg4U":[function(require,module,exports) {
 
-},{"./../images/stats.jpg":[["stats.cfcb10c1.jpg","JlPI"],"JlPI"],"./../images/discount-background1.jpg":[["discount-background1.e1871a37.jpg","N8ax"],"N8ax"]}],"Focm":[function(require,module,exports) {
+},{"./../images/dots.png":[["dots.9431e842.png","rQHO"],"rQHO"],"./../images/stats.jpg":[["stats.cfcb10c1.jpg","JlPI"],"JlPI"],"./../images/discount-background1.jpg":[["discount-background1.e1871a37.jpg","N8ax"],"N8ax"]}],"Focm":[function(require,module,exports) {
 "use strict";require("../node_modules/@fortawesome/fontawesome-free/css/all.min.css"),require("../node_modules/normalize.css/normalize.css"),require("./scss/style.scss"),require("./js/main");
 },{"../node_modules/@fortawesome/fontawesome-free/css/all.min.css":"iRkG","../node_modules/normalize.css/normalize.css":"DOAq","./scss/style.scss":"Gg4U","./js/main":"DOAq"}]},{},["Focm"], null)
