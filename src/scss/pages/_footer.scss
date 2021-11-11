@@ -86,10 +86,12 @@
     }
     //-----------------------
     .copyright {
-        @include flex(space-around, center);
         text-align: center;
         padding: 25px;
         border-top: 1px solid var(--clr-black-1);
+        .container {
+            @include flex(space-between, center);
+        }
         a {
             color: var(--clr-white-);
             font-weight: $fw-bold;
